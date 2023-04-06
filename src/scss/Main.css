@@ -1,0 +1,595 @@
+@charset "UTF-8";
+@import "reset.css";
+/*반응형, 브라우저 크기가 980px 이하일때*/
+/* @mixin tablet {
+    @media (min-width:$mobile) and (max-width: $tablet) {
+        @content;
+    }
+} */
+.play .main {
+  -webkit-animation-delay: 5s !important;
+          animation-delay: 5s !important;
+}
+.play .intro {
+  display: block !important;
+}
+
+.closed .main {
+  -webkit-animation-delay: 0s !important;
+          animation-delay: 0s !important;
+}
+.closed .intro {
+  display: none !important;
+}
+
+.all::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("./img/bak.png") 0 top/cover no-repeat fixed;
+  opacity: 10%;
+}
+.all .intro {
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+.all .intro.active {
+  -webkit-animation: intros 4s 1s forwards;
+          animation: intros 4s 1s forwards;
+}
+.all .intro .intrologo {
+  width: 20%;
+  position: absolute;
+  padding: 100px 100px;
+  left: 0;
+  top: 0;
+}
+.all .intro .introtext {
+  position: absolute;
+  padding: 100px 100px;
+  font-family: "Arial";
+  font-size: 200px;
+  font-weight: 700;
+  color: #153DB3;
+  top: 0;
+  left: 300px;
+}
+.all .intro .introimgbox {
+  display: flex;
+}
+.all .intro .introimgbox .introimg1 {
+  width: 100%;
+  display: block;
+}
+.all .intro .introimgbox .introimg2 {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 10%;
+  padding: 100px 100px;
+  z-index: 1;
+}
+@-webkit-keyframes intros {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes intros {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+.all .main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-animation: mains 1s forwards;
+          animation: mains 1s forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px;
+}
+.all .main .lashing {
+  text-align: left;
+}
+.all .main .lashing .maintitle {
+  padding-bottom: 150px;
+}
+.all .main .lashing .maintitle .titletext {
+  font-family: "Arial";
+  font-size: 55px;
+  font-weight: 700;
+  color: #153DB3;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
+  text-underline-position: under;
+  white-space: nowrap;
+}
+.all .main .lashing .maintitle .titleimg {
+  width: 200px;
+}
+.all .main .lashing .subtitle1 {
+  width: 35%;
+  padding: 20px 0;
+  padding-bottom: 150px;
+}
+.all .main .lashing .subtitle1 .subtitletitle1 {
+  font-family: "Arial";
+  font-size: 35px;
+  font-weight: 700;
+  color: #153DB3;
+  white-space: nowrap;
+}
+.all .main .lashing .subtitle1 .subtitle1box {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.all .main .lashing .subtitle1 .subtitle1box svg {
+  fill: #153DB3;
+}
+.all .main .lashing .subtitle1 .subtitle1box .subtitle1text {
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: 700;
+  color: #153DB3;
+}
+.all .main .lashing .subtitle2 {
+  width: 35%;
+  position: relative;
+}
+.all .main .lashing .subtitle2 .subtitletitle2 {
+  font-family: "Arial";
+  font-size: 35px;
+  font-weight: 700;
+  color: #153DB3;
+}
+.all .main .lashing .subtitle2 .subtitleimg2 {
+  width: 400px;
+  position: absolute;
+  top: -65px;
+  left: -46px;
+}
+.all .main .mainimg {
+  width: 50%;
+}
+.all .main .mainimg .mapbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  /* .map {
+      li {
+          position: absolute;
+          display: inline-block;
+      }
+
+
+      .area1 {
+          right: 482px;
+          top: 140px;
+      }
+
+      .area2 {
+          right: 271px;
+          top: 89px;
+      }
+
+      .area3 {
+          right: 223px;
+          top: 120px;
+      }
+
+      .area4 {
+          left: 87px;
+          top: 162px;
+      }
+
+      .area5 {
+          left: 169px;
+          top: 134px;
+      }
+
+      .area6 {
+          left: 169px;
+          top: 216px;
+      }
+
+      .area7 {
+          bottom: 461px;
+          right: 401px;
+      }
+
+      .area8 {
+          top: 274px;
+          left: 237px;
+      }
+
+      .area9 {
+          top: 295px;
+          left: 105px;
+      }
+
+      .area10 {
+          top: 324px;
+          left: 153px;
+      }
+
+      .area11 {
+          top: 352px;
+          left: 153px;
+      }
+
+      .area12 {
+          bottom: 362px;
+          right: 401px;
+      }
+
+      .area13 {
+          bottom: 354px;
+          left: 160px;
+      }
+
+      .area14 {
+          bottom: 246px;
+          left: 160px;
+      }
+
+      .area15 {
+          bottom: 316px;
+          right: 309px;
+      }
+
+      .area16 {
+          bottom: 267px;
+          right: 333px;
+      }
+
+      .area17 {
+          bottom: 279px;
+          right: 451px;
+      }
+
+      .area18 {
+          bottom: 205px;
+          left: 103px;
+      }
+
+      .area19 {
+          bottom: 86px;
+          left: 110px;
+      }
+  }  */
+}
+.all .main .mainimg .mapbox svg {
+  width: 73%;
+  min-width: 500px;
+  min-height: 60px;
+  background-position: center;
+  background-position: center;
+  background-size: cover;
+  transition: fill 0.2s ease-in-out;
+}
+@-webkit-keyframes mains {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mains {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.all .footer {
+  width: 100%;
+  padding: 14px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.all .footer .bg {
+  width: 3700px;
+  -webkit-animation: foos 40s linear infinite;
+          animation: foos 40s linear infinite;
+}
+.all .footer .bg p {
+  font-weight: 600;
+  font-family: "Arial";
+  color: #153DB3;
+  font-size: 25px;
+}
+@-webkit-keyframes foos {
+  0% {
+    transform: translateX(-580px);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+@keyframes foos {
+  0% {
+    transform: translateX(-580px);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+
+polygon:hover {
+  fill: #153DB3;
+}
+
+@media (max-width: 414px) {
+  /* 모바일 브라우저 414px */
+  .play .main {
+    -webkit-animation-delay: 5s !important;
+            animation-delay: 5s !important;
+  }
+  .play .intro {
+    display: block !important;
+  }
+  .closed .main {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  .closed .intro {
+    display: none !important;
+  }
+  .all::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("./img/bak.png") 0 top/cover no-repeat fixed;
+    opacity: 10%;
+  }
+  .all .intro {
+    opacity: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+  }
+  .all .intro.active {
+    -webkit-animation: intros 4s 1s forwards;
+            animation: intros 4s 1s forwards;
+  }
+  .all .intro .intrologo {
+    width: 20%;
+    position: absolute;
+    padding: 100px 100px;
+    left: 0;
+    top: 0;
+  }
+  .all .intro .introtext {
+    position: absolute;
+    padding: 30px 30px;
+    font-family: "Arial";
+    font-size: 100px;
+    font-weight: 700;
+    color: #153DB3;
+    top: 0;
+    left: 0px;
+  }
+  .all .intro .introimgbox {
+    display: flex;
+    padding-top: 250px;
+    padding-left: 20px;
+  }
+  .all .intro .introimgbox .introimg1 {
+    width: 100%;
+    display: block;
+  }
+  .all .intro .introimgbox .introimg2 {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 10%;
+    padding: 100px 100px;
+    z-index: 1;
+  }
+  @-webkit-keyframes intros {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes intros {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  .all .main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-animation: mains 1s forwards;
+            animation: mains 1s forwards;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .all .main .lashing {
+    text-align: left;
+    padding-bottom: 20px;
+  }
+  .all .main .lashing .maintitle {
+    padding-bottom: 30px;
+  }
+  .all .main .lashing .maintitle .titletext {
+    font-family: "Arial";
+    font-size: 35px;
+    font-weight: 700;
+    color: #153DB3;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-color: currentColor;
+            text-decoration-color: currentColor;
+    text-underline-position: under;
+    white-space: nowrap;
+  }
+  .all .main .lashing .maintitle .titleimg {
+    width: 200px;
+  }
+  .all .main .lashing .subtitle1 {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .all .main .lashing .subtitle1 .subtitletitle1 {
+    font-family: "Arial";
+    font-size: 25px;
+    font-weight: 700;
+    color: #153DB3;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .all .main .lashing .subtitle1 .subtitle1box {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+  }
+  .all .main .lashing .subtitle1 .subtitle1box svg {
+    fill: #153DB3;
+  }
+  .all .main .lashing .subtitle1 .subtitle1box .subtitle1text {
+    font-family: "Arial";
+    font-size: 20px;
+    font-weight: 700;
+    color: #153DB3;
+  }
+  .all .main .lashing .subtitle2 {
+    display: none;
+    width: 35%;
+    position: relative;
+  }
+  .all .main .lashing .subtitle2 .subtitletitle2 {
+    font-family: "Arial";
+    font-size: 35px;
+    font-weight: 700;
+    color: #153DB3;
+  }
+  .all .main .lashing .subtitle2 .subtitleimg2 {
+    width: 400px;
+    position: absolute;
+    top: -65px;
+    left: -46px;
+  }
+  .all .main .mainimg {
+    width: 60%;
+  }
+  .all .main .mainimg .mapbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+  }
+  .all .main .mainimg .mapbox svg {
+    min-width: 360px;
+    min-height: 60px;
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    transition: fill 0.2s ease-in-out;
+    left: -115px;
+    position: absolute;
+  }
+  @-webkit-keyframes mains {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes mains {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .all .footer {
+    width: 100%;
+    padding: 14px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+  .all .footer .bg {
+    width: 3700px;
+    -webkit-animation: foos 40s linear infinite;
+            animation: foos 40s linear infinite;
+    padding-bottom: 20px;
+  }
+  .all .footer .bg p {
+    font-weight: 600;
+    font-family: "Arial";
+    color: #153DB3;
+    font-size: 17px;
+  }
+  @-webkit-keyframes foos {
+    0% {
+      transform: translateX(-580px);
+    }
+    100% {
+      transform: translateX(-1750px);
+    }
+  }
+  @keyframes foos {
+    0% {
+      transform: translateX(-580px);
+    }
+    100% {
+      transform: translateX(-1750px);
+    }
+  }
+}/*# sourceMappingURL=Main.css.map */

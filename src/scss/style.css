@@ -1,0 +1,47 @@
+.swbox {
+  width: 100%;
+  height: 500px;
+}
+.swbox .swiper {
+  width: 70%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swbox .swiper .slidebox {
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swbox .swiper .slidebox .databox {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swbox .swiper .slidebox .databox img {
+  display: block;
+  width: 700px;
+  height: 500px;
+}
+.swbox .swiper .slidebox .databox .slidetext1 {
+  font-size: 35px;
+  bottom: 40px;
+  left: 10px;
+  color: white;
+  z-index: 10;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Arial";
+}
+.swbox .swiper .slidebox .databox .slidetext2 {
+  font-size: 20px;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  z-index: 10;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Arial";
+}/*# sourceMappingURL=style.css.map */

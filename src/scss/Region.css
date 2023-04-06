@@ -1,0 +1,304 @@
+@charset "UTF-8";
+@import "reset.css";
+/*반응형, 브라우저 크기가 980px 이하일때*/
+/* @mixin tablet {
+    @media (min-width:$mobile) and (max-width: $tablet) {
+        @content;
+    }
+} */
+.to {
+  width: 100vw;
+  height: 100vh;
+  background-color: #153DB3;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+  position: relative;
+}
+.to .sidelegt {
+  text-align: left;
+  position: absolute;
+  left: 200px;
+  z-index: 1;
+}
+.to .sidelegt .topbox {
+  width: 100%;
+  padding-bottom: 100px;
+  display: flex;
+}
+.to .sidelegt .topbox .toptext {
+  font-family: "Arial";
+  font-size: 70px;
+  font-weight: 700;
+  color: white;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
+  text-underline-position: under;
+  white-space: nowrap;
+  padding-bottom: 40px;
+}
+.to .sidelegt .topbox .toptext2 {
+  font-family: "Arial";
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
+.to .sidelegt .na {
+  width: 100%;
+  font-family: "Arial";
+  color: white;
+  padding-bottom: 100px;
+  font-size: 25px;
+}
+.to .sidelegt .na .nati {
+  display: flex;
+  padding-bottom: 20px;
+}
+.to .sidelegt .na .nati .natext {
+  white-space: nowrap;
+}
+.to .sidelegt .na .inwi {
+  display: flex;
+}
+.to .sidelegt .na .inwi div {
+  padding-right: 10px;
+}
+.to .sidelegt .na .inwi input {
+  font-family: "Arial";
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+.to .sidelegt .status {
+  width: 100%;
+}
+.to .sidelegt .status .statusbox {
+  padding-left: 10px;
+  width: 700px;
+  background: #ffffff;
+  border-radius: 10px;
+  color: #153DB3;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px 15px;
+}
+.to .sidelegt .status .statusbox > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+.to .sidelegt .status .statusbox .tiname {
+  font-size: 20px;
+  font-weight: 900;
+  width: 24%;
+}
+.to .sidelegt .status .statusbox .boxtitile {
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+}
+.to .sidelegt .status .statusbox .boxtitile .boxp {
+  font-size: 20px;
+}
+.to .sidelegt .status .statusbox .boxsun {
+  display: flex;
+  gap: 10px;
+}
+.to .sidelegt .status .statusbox .boxmon {
+  display: flex;
+  gap: 10px;
+}
+.to .sideright {
+  position: absolute;
+  bottom: 55px;
+  right: -370px;
+  width: 100%;
+  padding-top: 80px;
+}
+.to .sideright .imgbig {
+  margin: 0 auto;
+  width: 100%;
+}
+.to .sideright .imgbig .imgcity1 {
+  width: 100%;
+  max-width: 100%;
+}
+.to .sideright .imgbig .imgcity1 img {
+  width: 700px;
+  max-width: 100%;
+}
+.to .sideright .imgsmall {
+  width: 100%;
+  position: absolute;
+  top: -95px;
+  right: 550px;
+}
+.to .sideright .imgsmall .imgcity2 {
+  width: 100%;
+}
+.to .sideright .imgsmall .imgcity2 img {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  max-width: 100%;
+  width: 100px;
+}
+
+@media (max-width: 414px) {
+  html {
+    overflow: visible;
+  }
+  .to {
+    width: 100vw;
+    height: 140vh;
+    background-color: #153DB3;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+  }
+  .to .sidelegt {
+    width: 100%;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+    height: 90%;
+  }
+  .to .sidelegt .topbox {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .to .sidelegt .topbox .toptext {
+    font-family: "Arial";
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-color: currentColor;
+            text-decoration-color: currentColor;
+    text-underline-position: under;
+    white-space: nowrap;
+    padding-bottom: 40px;
+  }
+  .to .sidelegt .topbox svg {
+    height: 2em;
+  }
+  .to .sidelegt .na {
+    display: none;
+    width: 100%;
+    font-family: "Arial";
+    color: white;
+    padding-bottom: 100px;
+    font-size: 25px;
+  }
+  .to .sidelegt .na .nati {
+    display: flex;
+    padding-bottom: 20px;
+  }
+  .to .sidelegt .na .nati .natext {
+    white-space: nowrap;
+  }
+  .to .sidelegt .na .inwi {
+    display: flex;
+  }
+  .to .sidelegt .na .inwi div {
+    padding-right: 10px;
+  }
+  .to .sidelegt .na .inwi input {
+    font-family: "Arial";
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px 15px;
+  }
+  .to .sidelegt .status {
+    width: 100%;
+    padding-top: 230px;
+  }
+  .to .sidelegt .status .statusbox {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    color: #153DB3;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 15px;
+    /* div {
+                           display: flex;
+                           flex-wrap: wrap;
+                           justify-content: space-around;
+                           align-items: flex-start;
+                           padding-bottom: 10px;
+                       }
+    */
+  }
+  .to .sidelegt .status .statusbox .tiname {
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 700;
+    width: 100%;
+  }
+  .to .sidelegt .status .statusbox .boxtitile {
+    display: flex;
+    gap: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .to .sidelegt .status .statusbox .boxtitile .boxp {
+    font-size: 20px;
+  }
+  .to .sidelegt .status .statusbox .boxsun {
+    display: flex;
+    gap: 10px;
+  }
+  .to .sidelegt .status .statusbox .boxmon {
+    display: flex;
+    gap: 10px;
+  }
+  .to .sideright {
+    position: absolute;
+    bottom: 0px;
+    right: 133px;
+    width: 44%;
+    padding-top: 0px;
+    top: 136px;
+  }
+  .to .sideright .imgbig {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .to .sideright .imgbig .imgcity1 {
+    width: 100%;
+    max-width: 100%;
+  }
+  .to .sideright .imgbig .imgcity1 img {
+    width: 700px;
+    max-width: 120%;
+  }
+  .to .sideright .imgsmall {
+    width: 100%;
+    position: absolute;
+    top: -95px;
+    right: 550px;
+  }
+  .to .sideright .imgsmall .imgcity2 {
+    width: 100%;
+    display: none;
+  }
+  .to .sideright .imgsmall .imgcity2 img {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    max-width: 100%;
+    width: 100px;
+  }
+}/*# sourceMappingURL=Region.css.map */

@@ -1,0 +1,444 @@
+@charset "UTF-8";
+@import "reset.css";
+/*반응형, 브라우저 크기가 980px 이하일때*/
+/* @mixin tablet {
+    @media (min-width:$mobile) and (max-width: $tablet) {
+        @content;
+    }
+} */
+html {
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.Place {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.Place .placeleft {
+  padding: 0 100px;
+  font-family: "Arial";
+  color: #153DB3;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 200px;
+  z-index: 1;
+}
+.Place .placeleft .placetitle {
+  font-size: 55px;
+  font-weight: 700;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-position: under;
+  padding-bottom: 150px;
+  white-space: nowrap;
+}
+.Place .placeleft .placetitle a {
+  width: 20%;
+}
+.Place .placeleft .placetitle a img {
+  width: 100%;
+}
+.Place .placeleft .placesub .subbox {
+  display: flex;
+  align-items: center;
+  padding-bottom: 100px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-decoration: none;
+}
+.Place .placeleft .placesub .subbox svg {
+  fill: #153DB3;
+}
+.Place .placeleft .placesub .subbox a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  text-decoration: none;
+}
+.Place .placeleft .placesub .subbox a div {
+  font-family: "Arial";
+  color: #153DB3;
+  font-size: 40px;
+  font-weight: 700;
+}
+.Place .placeleft .placebox {
+  width: 450px;
+  border: 3px solid #153DB3;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+.Place .placeleft .placebox .placeboder .placetop {
+  font-family: "Arial";
+  font-weight: 700;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.Place .placeleft .placebox .placeboder .setbox {
+  font-family: "Arial";
+  font-weight: 500;
+}
+.Place .placeleft .placebox .placeboder .setbox .box01 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box01 .pad10 {
+  padding-right: 82px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box02 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box02 .pad10 {
+  padding-right: 64px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box03 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box03 .pad10 {
+  padding-right: 82px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box04 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box04 .pad10 {
+  padding-right: 99px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box05 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box05 .pad10 {
+  padding-right: 82px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box06 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box06 .pad10 {
+  padding-right: 30px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box07 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box07 .pad10 {
+  padding-right: 82px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box08 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box08 .pad10 {
+  padding-right: 64px;
+}
+.Place .placeleft .placebox .placeboder .setbox .box09 {
+  display: flex;
+  justify-content: space-around;
+}
+.Place .placeleft .placebox .placeboder .setbox .box09 .pad10 {
+  padding-right: 81px;
+}
+.Place .placeright {
+  width: 65%;
+  position: absolute;
+  right: -34px;
+}
+.Place .placeright .rightbox {
+  width: 100%;
+}
+.Place .placeright .rightbox svg {
+  width: 50%;
+}
+
+.risebox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.risebox .risetext {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Arial";
+  color: #153DB3;
+  padding-bottom: 50px;
+}
+.risebox .swbox {
+  width: 100%;
+}
+.risebox .swbox .swiper {
+  width: 80%;
+}
+.risebox .swbox .swiper .slidebox {
+  width: 400px !important;
+  height: 500px;
+}
+.risebox .swbox .swiper .slidebox .databox {
+  width: 400px;
+}
+.risebox .swbox .swiper .slidebox .databox img {
+  border: 4px solid #153DB3;
+  width: 400px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: -50px;
+}
+
+path:hover {
+  cursor: pointer;
+  fill: #153DB3;
+  opacity: 40%;
+}
+
+@media (max-width: 414px) {
+  /* 모바일 브라우저 414px */
+  html {
+    overflow: hidden;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .Place {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .Place .placeleft {
+    padding: 0;
+    font-family: "Arial";
+    color: #153DB3;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 78px;
+    top: 77px;
+    z-index: 1;
+  }
+  .Place .placeleft .placetitle {
+    font-size: 35px;
+    font-weight: 700;
+    display: flex;
+    width: 100%;
+    text-align: left;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    text-underline-position: under;
+    padding-bottom: 30px;
+    white-space: nowrap;
+  }
+  .Place .placeleft .placetitle a {
+    display: none;
+    width: 20%;
+  }
+  .Place .placeleft .placetitle a img {
+    width: 100%;
+  }
+  .Place .placeleft .placesub .subbox {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-left: 57px;
+  }
+  .Place .placeleft .placesub .subbox img {
+    display: none;
+  }
+  .Place .placeleft .placesub .subbox svg {
+    fill: #153DB3;
+  }
+  .Place .placeleft .placesub .subbox a {
+    -webkit-text-decoration-line: block;
+            text-decoration-line: block;
+    -webkit-text-decoration: block;
+            text-decoration: block;
+  }
+  .Place .placeleft .placesub .subbox a div {
+    font-family: "Arial";
+    color: #153DB3;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Place .placeleft .placebox {
+    width: 350px;
+    border: 3px solid #153DB3;
+    border-radius: 20px;
+    padding: 10px 10px;
+    font-size: 20px;
+    display: none;
+  }
+  .Place .placeleft .placebox .placeboder .placetop {
+    font-family: "Arial";
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Place .placeleft .placebox .placeboder .setbox {
+    font-family: "Arial";
+    font-weight: 500;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box01 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box01 .pad10 {
+    padding-right: 82px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box02 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box02 .pad10 {
+    padding-right: 64px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box03 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box03 .pad10 {
+    padding-right: 82px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box04 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box04 .pad10 {
+    padding-right: 99px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box05 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box05 .pad10 {
+    padding-right: 82px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box06 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box06 .pad10 {
+    padding-right: 30px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box07 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box07 .pad10 {
+    padding-right: 82px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box08 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box08 .pad10 {
+    padding-right: 64px;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box09 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Place .placeleft .placebox .placeboder .setbox .box09 .pad10 {
+    padding-right: 81px;
+  }
+  .Place .placeright {
+    width: 100%;
+    top: 266px;
+    right: 172px;
+    bottom: 0px;
+  }
+  .Place .placeright .rightbox {
+    width: 100%;
+  }
+  .Place .placeright .rightbox svg {
+    position: absolute;
+    width: 83%;
+  }
+  .Place .placeright::after {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: 50px;
+    left: 375px;
+    content: "";
+    background-image: url(/public/imgs/icons8-down-24.png);
+    -webkit-animation: gam 1.1s ease-in-out alternate infinite;
+            animation: gam 1.1s ease-in-out alternate infinite;
+    background-repeat: no-repeat;
+  }
+  @-webkit-keyframes gam {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+  }
+  @keyframes gam {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+  }
+  .risebox {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .risebox .risetext {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Arial";
+    color: #153DB3;
+    padding-bottom: 50px;
+  }
+  .risebox .swbox {
+    width: 100%;
+  }
+  .risebox .swbox .swiper {
+    width: 300px;
+  }
+  .risebox .swbox .swiper .slidebox {
+    width: 300px !important;
+    height: 500px;
+  }
+  .risebox .swbox .swiper .slidebox .databox {
+    width: 300px;
+  }
+  .risebox .swbox .swiper .slidebox .databox img {
+    border: 4px solid #153DB3;
+    width: 300px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-right: -50px;
+  }
+}/*# sourceMappingURL=Sights.css.map */

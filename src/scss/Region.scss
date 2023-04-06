@@ -1,0 +1,370 @@
+@import "reset.css";
+@import '../scss/variable.scss';
+
+.to {
+    width: 100vw;
+    height: 100vh;
+    background-color: #153DB3;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    position: relative;
+
+    .sidelegt {
+        text-align: left;
+        //width: 100%;
+        position: absolute;
+        left: 200px;
+        z-index: 1;
+
+        .topbox {
+            width: 100%;
+            padding-bottom: 100px;
+            display: flex;
+
+            .toptext {
+                font-family: 'Arial';
+                font-size: 70px;
+                font-weight: 700;
+                color: #ffff;
+                text-decoration-line: underline;
+                text-decoration-color: currentColor;
+                text-underline-position: under;
+                white-space: nowrap;
+                padding-bottom: 40px;
+            }
+
+            .toptext2 {
+                font-family: 'Arial';
+                font-size: 50px;
+                font-weight: 700;
+                color: #ffff;
+            }
+        }
+
+        .na {
+            width: 100%;
+            font-family: 'Arial';
+            color: #ffff;
+            padding-bottom: 100px;
+            font-size: 25px;
+
+            .nati {
+                display: flex;
+                padding-bottom: 20px;
+
+                .natext {
+                    white-space: nowrap;
+                }
+            }
+
+            .inwi {
+                display: flex;
+
+                div {
+                    padding-right: 10px;
+                }
+
+                input {
+                    font-family: 'Arial';
+                    background-color: transparent;
+                    color: white;
+                    border: 1px solid white;
+                    border-radius: 15px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+
+        .status {
+            width: 100%;
+
+
+            .statusbox {
+                padding-left: 10px;
+                width: 700px;
+                background: #ffffff;
+                border-radius: 10px;
+                color: #153DB3;
+                font-size: 17px;
+                font-weight: 700;
+                padding: 15px 15px;
+
+                >div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    padding-bottom: 10px;
+                }
+
+                .tiname {
+                    font-size: 20px;
+                    font-weight: 900;
+                    width: 24%;
+                }
+
+                .boxtitile {
+                    display: flex;
+                    gap: 10px;
+                    padding-right: 20px;
+
+
+
+                    .boxp {
+                        font-size: 20px;
+                    }
+
+                    .boxdate {}
+                }
+
+                .boxsun {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .boxmon {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+
+    .sideright {
+        position: absolute;
+        bottom: 55px;
+        right: -370px;
+        width: 100%;
+        padding-top: 80px;
+
+        //float:right;
+        //display: flex;
+        //width: 100%;
+        .imgbig {
+            margin: 0 auto;
+            width: 100%;
+
+            .imgcity1 {
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    width: 700px;
+                    max-width: 100%;
+                }
+            }
+
+
+        }
+
+        .imgsmall {
+            width: 100%;
+            position: absolute;
+            top: -95px;
+            right: 550px;
+
+            .imgcity2 {
+                width: 100%;
+
+                img {
+                    position: absolute;
+                    top: 40px;
+                    right: 0px;
+                    max-width: 100%;
+                    width: 100px;
+                }
+            }
+
+        }
+    }
+}
+
+@include mobile {
+
+    html {
+        overflow: visible;
+    }
+
+    .to {
+
+        width: 100vw;
+        height: 140vh;
+        background-color: #153DB3;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+        //position: relative;
+
+        .sidelegt {
+            //text-align: left;
+            width: 100%;
+            position: relative;
+            left: 0px;
+            z-index: 1;
+            height: 90%;
+
+            .topbox {
+                width: 100%;
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .toptext {
+                    font-family: 'Arial';
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: #ffff;
+                    text-decoration-line: underline;
+                    text-decoration-color: currentColor;
+                    text-underline-position: under;
+                    white-space: nowrap;
+                    padding-bottom: 40px;
+                }
+
+                svg {
+                    height: 2em;
+                }
+            }
+
+            .na {
+                display: none;
+                width: 100%;
+                font-family: 'Arial';
+                color: #ffff;
+                padding-bottom: 100px;
+                font-size: 25px;
+
+                .nati {
+                    display: flex;
+                    padding-bottom: 20px;
+
+                    .natext {
+                        white-space: nowrap;
+                    }
+                }
+
+                .inwi {
+                    display: flex;
+
+                    div {
+                        padding-right: 10px;
+                    }
+
+                    input {
+                        font-family: 'Arial';
+                        background-color: transparent;
+                        color: white;
+                        border: 1px solid white;
+                        border-radius: 15px;
+                        padding: 5px 15px;
+                    }
+                }
+            }
+
+            .status {
+                width: 100%;
+                padding-top: 230px;
+
+                .statusbox {
+                    width: 100%;
+                    background: #ffffff;
+                    border-radius: 10px;
+                    color: #153DB3;
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 15px 15px;
+
+                    /* div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        align-items: flex-start;
+                        padding-bottom: 10px;
+                    }
+ */
+                    .tiname {
+                        white-space: nowrap;
+                        font-size: 25px;
+                        font-weight: 700;
+                        width: 100%;
+                    }
+
+                    .boxtitile {
+                        display: flex;
+                        gap: 10px;
+                        padding-right: 20px;
+                        padding-bottom: 10px;
+
+
+                        .boxp {
+                            font-size: 20px;
+                        }
+
+                        .boxdate {}
+                    }
+
+                    .boxsun {
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .boxmon {
+                        display: flex;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+
+        .sideright {
+            position: absolute;
+            bottom: 0px;
+            right: 133px;
+            width: 44%;
+            padding-top: 0px;
+            top: 136px;
+
+            //float:right;
+            //display: flex;
+            //width: 100%;
+            .imgbig {
+                margin: 0 auto;
+                width: 100%;
+
+                .imgcity1 {
+                    width: 100%;
+                    max-width: 100%;
+
+                    img {
+                        width: 700px;
+                        max-width: 120%;
+                    }
+                }
+
+
+            }
+
+            .imgsmall {
+                width: 100%;
+                position: absolute;
+                top: -95px;
+                right: 550px;
+
+                .imgcity2 {
+                    width: 100%;
+                    display: none;
+
+                    img {
+                        position: absolute;
+                        top: 40px;
+                        right: 0px;
+                        max-width: 100%;
+                        width: 100px;
+                    }
+                }
+
+            }
+        }
+    }
+}
