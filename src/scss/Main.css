@@ -538,7 +538,7 @@ polygon:hover {
     background-position: center;
     background-size: cover;
     transition: fill 0.2s ease-in-out;
-    left: -115px;
+    left: -126px;
     position: absolute;
   }
   @-webkit-keyframes mains {
