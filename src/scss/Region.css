@@ -156,16 +156,16 @@
   }
   .to {
     width: 100vw;
-    height: 140vh;
+    height: auto;
     background-color: #153DB3;
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 20px 50px;
   }
   .to .sidelegt {
     width: 100%;
     position: relative;
-    left: 0px;
+    left: -15px;
     z-index: 1;
     height: 90%;
   }
@@ -266,11 +266,11 @@
   }
   .to .sideright {
     position: absolute;
-    bottom: 0px;
-    right: 133px;
+    /* bottom: -7px; */
+    right: 141px;
     width: 44%;
     padding-top: 0px;
-    top: 136px;
+    top: 105px;
   }
   .to .sideright .imgbig {
     margin: 0 auto;
